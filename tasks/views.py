@@ -3,6 +3,7 @@ from .forms import *
 from .models import *
 # Create your views here.
 
+# to do list
 
 def index(request):
     task = Task.objects.all()
@@ -18,6 +19,7 @@ def index(request):
     return render(request,'tasks/base.html',context)
 
 
+# update your file
 
 def update_file(request,pk):
     task = Task.objects.get(id=pk)
@@ -30,9 +32,10 @@ def update_file(request,pk):
         return redirect('/')
 
     context = {'form':form}
-
     return render(request,'tasks/update.html',context)
 
+
+# delete file
 
 def delete_file(request,pk):
     item = Task.objects.get(id=pk)
