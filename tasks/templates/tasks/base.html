@@ -21,6 +21,7 @@
         <div>
             <p>{{task}}</p>
             <a href="{% url 'update' task.id %}">Update</a>
+            <a href="{% url 'delete' task.id %}">Delete</a>
         </div>
     {% endfor %}
     
